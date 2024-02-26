@@ -43,6 +43,7 @@ export const updateCommissionPercentBulk = async (req: Request, res: Response) =
     try {
       const { productId } = req.params;
       const { commissionPercent } = req.body;
+      
   
       const updatedProduct = await Product.findByIdAndUpdate(
         productId,
@@ -54,7 +55,10 @@ export const updateCommissionPercentBulk = async (req: Request, res: Response) =
         return res.status(404).json({ message: 'Product not found' });
       }
   
-      res.json(updatedProduct);
+      // Fetch all products after updating commission percent
+    const allProducts = await Product.find();
+
+      res.json(allProducts);
     } catch (error: any) {
       res.status(500).json({ message: error.message });
     }
