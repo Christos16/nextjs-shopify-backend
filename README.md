@@ -1,40 +1,28 @@
-Sure, here's the updated section regarding running the application:
-
 ## Running the Application
 
-You can choose to run the application using Docker Compose or by setting it up locally.
+This application can be run using Docker Compose, set up locally on your machine, or connected to an existing MongoDB Atlas instance for accessing pre-populated data.
 
 ### Using Docker Compose
 
-To run the application with Docker Compose, follow these steps:
-
-1. Ensure you have Docker installed on your machine.
-2. Clone this repository to your local machine.
-3. Navigate to the root directory of the project.
-4. Run the following command to start the backend server and database:
-
-```bash
-docker-compose up
-```
-
-5. Once the Docker containers are running, you can access the application at `http://localhost:9000`.
-
-### Running Locally
-
-If you prefer to run the application locally without Docker, follow these steps:
+To run the application with Docker Compose, ensure Docker is installed and follow these steps:
 
 1. Clone this repository to your local machine.
 2. Navigate to the root directory of the project.
-3. Install dependencies using Yarn:
+3. Execute `docker-compose up` in your terminal to start the backend server and database.
+4. Access the application at `http://localhost:9000`.
 
-```bash
-yarn install
-```
+### Running Locally
 
-4. Start the backend server:
+For a local setup without Docker, please follow these instructions:
 
-```bash
-yarn start
-```
+1. Clone this repository to your local machine.
+2. Navigate to the project's root directory.
+3. Install dependencies with `yarn install`.
+4. Start the backend server using `yarn start`.
+5. The application will be available at `http://localhost:9000`.
 
-5. The application will be accessible at `http://localhost:9000`.
+### Connecting to MongoDB Atlas
+
+If you face any issues with the database setup or prefer to work with a dataset that has already been populated, you can connect to a MongoDB Atlas instance I manage. This instance contains populated data, facilitating a smoother start with the application.
+
+**To request access to this MongoDB Atlas database, please reach out to me directly or inform Harel, who will pass on the message.** This will allow you to bypass local database setup and directly access a comprehensive dataset for development purposes.
